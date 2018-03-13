@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Profile</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="col-md-5">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <div ng-show="slide1">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Basic Info</h3>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.name" class="form-control" placeholder="Name"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.sports" class="form-control" placeholder="Sports"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.nationality" class="form-control" placeholder="Nationality"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.gender" class="form-control" placeholder="Gender"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.dob" class="form-control" placeholder="Date of Birth"/>
+                    </div>
+                    <div>
+                        <button type="button" data-ng-click="sliding()" class="btn btn-primary pull-right">Next</button>
+                    </div>
+
+                </div>
+
+                <div ng-show="slide2">
+                    <h3 style="margin-bottom: 25px; text-align: center;">About you</h3>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.location" class="form-control" placeholder="Location"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.association" class="form-control" placeholder="Association"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.team" class="form-control" placeholder="Team"/>
+                    </div>
+                    <div class="form-group">
+                        <textarea type="textarea" data-ng-model="new.about" class="form-control" placeholder="About" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.interests" class="form-control" placeholder="Interests"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.charities" class="form-control" placeholder="Charities"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.pets" class="form-control" placeholder="Pets"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.drinks" class="form-control" placeholder="Drinks alcohol?"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.married" class="form-control" placeholder="Married?"/>
+                    </div>
+                    <div>
+                        <button type="button" data-ng-click="slidingBack()" class="btn btn-primary pull-left">Back</button>
+                        <button type="button" data-ng-click="sliding()" class="btn btn-primary pull-right">Next</button>
+                    </div>
+                </div>
+
+                <div ng-show="slide3">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Social Media</h3>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.profileImage" class="form-control" placeholder="Profile Image"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-ng-model="new.socialMedia" class="form-control" placeholder="Social Media"/>
+                    </div>
+
+                    <div>
+                        <button type="button" data-ng-click="slidingBack()" class="btn btn-primary pull-left">Back</button>
+                        <button type="button" data-ng-click="sliding()" class="btn btn-primary pull-right">Next</button>
+                    </div>
+
+                </div>
+
+                <div ng-show="slide4">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Preview</h3>
+
+                    <div class="form-group">
+                        <p class="lead">Name</p><p>{{new.name}}</p><br />
+                    </div>
+
+                    <div class="form-group">
+                        <p class="lead">Sports</p><p>{{new.sports}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Nationality</p><p>{{new.nationality}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Gender</p><p>{{new.gender}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Date of Birth</p><p>{{new.dob}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Location</p><p>{{new.location}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Association</p><p>{{new.association}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Team</p><p>{{new.team}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">About</p><p>{{new.about}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Interests</p><p>{{new.interests}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Charities</p><p>{{new.charities}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Pets</p><p>{{new.pets}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Drinks alcohol?</p><p>{{new.drinks}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Married?</p><p>{{new.married}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Profile Image</p><p>{{new.profileImage}}</p><br />
+                    </div>
+                    <div class="form-group">
+                        <p class="lead">Social Media</p><p>{{new.socialMedia}}</p><br />
+                    </div>
+
+                    <div>
+                        <button type="button" data-ng-click="slidingBack()" class="btn btn-primary pull-left">Edit</button>
+                        <button type="button" data-ng-click="addAthlete(); sliding()" class="btn btn-primary pull-right">Submit</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

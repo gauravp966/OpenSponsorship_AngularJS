@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Profiles</title>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-5">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <h2 style="margin-bottom: 25px; text-align: center;">All Profiles</h2>
+                <div data-ng-repeat="ath in athletes" style="margin:50px 50px 50px 50px">
+                    <hr>
+                    <p class="h4">{{ath.name}}</p><br/>
+                    <p><a class="h6">Sports:</a> {{ath.sports}}</p>
+                    <p><a class="h6">Nationality:</a> {{ath.nationality}}</p>
+                    <p><a class="h6">Gender:</a> {{ath.gender}}</p>
+                    <a href="" class="btn btn-info" data-toggle="collapse" data-target="#{{ath.name}}">Details..</a><br/><br/>
+
+                    <div id="{{ath.name}}" class="collapse" >
+                        <p><a class="h6">Date of Birth:</a> {{ath.dob}}</p>
+                        <p><a class="h6">Locations:</a> {{ath.location}}</p>
+                        <p><a class="h6">Associations:</a> {{ath.association}}</p>
+                        <p><a class="h6">Team:</a> {{ath.team}}</p>
+                        <p><a class="h6">Abouts:</a> {{ath.abouts}}</p>
+                        <p><a class="h6">Interests:</a> {{ath.interests}}</p>
+                        <p><a class="h6">Charities:</a> {{ath.charities}}</p>
+                        <p><a class="h6">Drinks:</a> {{ath.drinks}}</p>
+                        <p><a class="h6">Married:</a> {{ath.married}}</p>
+                        <p><a class="h6">Image:</a> {{ath.profile_image}}</p>
+                        <p><a class="h6">Social Media:</a> {{ath.social_media}}</p>
+                    </div>
+                    <hr>
+                </div>
+</body>
+</html>
